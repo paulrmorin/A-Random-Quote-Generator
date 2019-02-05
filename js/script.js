@@ -41,13 +41,6 @@ let four = [quotes[4].quote, quotes[4].source];
 
 let newQuotes = [zero, one, two, three, four];
 
-
-function random() {
-
-
-}
-
-
 /***
   Create the `getRandomQuote` function to:
    - generate a random number
