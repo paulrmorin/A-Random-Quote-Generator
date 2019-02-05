@@ -44,7 +44,7 @@ let quotes = [
 ***/
 
 
-}
+
 function getRandomQuote(){
   let randomQuote = [Math.floor(Math.random() * quotes.length)]
     return quotes[randomQuote]
@@ -61,12 +61,15 @@ function getRandomQuote(){
    - set the `innerHTML` of the `quote-box` div to the HTML string.
 ***/
 function printQuote() {
-  var thoughts = getRandomQuote();
-  thoughts += "<h1> " + quotes[0].quote + "</h1>";
-  thoughts += "<p> " + quotes[0].source + "</p>";
-  return thoughts;
+  let wisdom = getRandomQuote(quotes);
+  let message = "";
+  message += '<p class="quote">' + wisdom.quote + '.</p>';
+  message += '<p class="source">' + wisdom.source + '</p>';
+  return message
 }
+//<p class="quote">Every great developer you know got there by solving problems they were unqualified to solve until they actually did it.</p>
 
+//<p class="source">Patrick McKenzie<span class="citation">Twitter</span><span class="year">2016</span></p>
 
 /***
   When the "Show another quote" button is clicked, the event listener
