@@ -33,13 +33,8 @@ let quotes = [
   }
 ];
 
-let zero = [quotes[0].quote, quotes[0].source];
-let one = [quotes[1].quote, quotes[1].source];
-let two= [quotes[2].quote, quotes[2].source];
-let three = [quotes[3].quote, quotes[3].source];
-let four = [quotes[4].quote, quotes[4].source];
 
-let newQuotes = [zero, one, two, three, four];
+
 
 /***
   Create the `getRandomQuote` function to:
@@ -47,9 +42,12 @@ let newQuotes = [zero, one, two, three, four];
    - use the random number to `return` a random quote object from the
      `quotes` array.
 ***/
-function getRandomQuote(){
-  return newQuotes[Math.floor(Math.random() * newQuotes.length)]
 
+
+}
+function getRandomQuote(){
+  let randomQuote = [Math.floor(Math.random() * quotes.length)]
+    return quotes[randomQuote]
 }
 
 
@@ -62,8 +60,12 @@ function getRandomQuote(){
      they are added to the HTML string.
    - set the `innerHTML` of the `quote-box` div to the HTML string.
 ***/
-
-
+function printQuote() {
+  var thoughts = getRandomQuote();
+  thoughts += "<h1> " + quotes[0].quote + "</h1>";
+  thoughts += "<p> " + quotes[0].source + "</p>";
+  return thoughts;
+}
 
 
 /***
