@@ -63,16 +63,21 @@ function getRandomQuote(){
    - set the `innerHTML` of the `quote-box` div to the HTML string.
 ***/
 function printQuote() {
-  let wisdom = getRandomQuote(quotes);
+  let wisdom = getRandomQuote();
   let message = "";
-  message += '<p class="quote">' + wisdom.quote + '.</p>';
-  message += '<p class="source">' + wisdom.source + '</p>';
-  if(wisdom.citation){
-    message += '<span class="citation">' + wisdom.citation + '</span>' + '<span class="year">' + wisdom.year + '</span'
+  if (wisdom.citation){
+    message += '<p class="quote">' + wisdom.quote + '.</p>';
+    message += '<p class="source">' + wisdom.source +'<span class="citation">' + wisdom.citation + '</span><span class="year">' + wisdom.year + '</span></p>';
+  } else {
+    message += '<p class="quote">' + wisdom.quote + '.</p>';
+    message += '<p class="source">' + wisdom.source + '</p>';
   }
+
   document.getElementById("quote-box").innerHTML = message;
 };
 printQuote();
+
+
 //<p class="quote">Every great developer you know got there by solving problems they were unqualified to solve until they actually did it.</p>
 
 //<p class="source">Patrick McKenzie<span class="citation">Twitter</span><span class="year">2016</span></p>
