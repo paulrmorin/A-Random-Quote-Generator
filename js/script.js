@@ -17,7 +17,9 @@ FSJS project 1 - A Random Quote Generator
 ***/
 let quotes = [
   { quote: "The only way to do great work is to love what you do",
-    source: "Steve Jobs"
+    source: "Steve Jobs",
+    citation: "Stanford University Commencement Speach",
+    year: 2005
   },
   { quote: "Successful and unsuccessful people do not vary greatly in their abilities. They vary in their desires to reach their potential.",
     source: "John Maxwell"
@@ -65,6 +67,12 @@ function printQuote() {
   let message = "";
   message += '<p class="quote">' + wisdom.quote + '.</p>';
   message += '<p class="source">' + wisdom.source + '</p>';
+  if (wisdom.citation && wisdom.year) {
+    message += '<span class="citation">' + wisdom.citation + '</span>';
+    message += '<span class="year">' + wisdom.year + '</span>'
+  } else {
+    message += '<span class="citation">' + wisdom.citation + '</span>';
+  }
   return message
 }
 //<p class="quote">Every great developer you know got there by solving problems they were unqualified to solve until they actually did it.</p>
