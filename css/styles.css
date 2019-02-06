@@ -62,6 +62,14 @@ body {
   content: ", ";
   font-style: normal;
 }
+.tag {
+  font-style: bold;
+}
+
+.tag:before {
+  content: ", ";
+  font-style: bold;
+}
 
 .year:before {
   content: ", ";
