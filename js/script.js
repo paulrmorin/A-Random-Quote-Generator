@@ -67,14 +67,12 @@ function printQuote() {
   let message = "";
   message += '<p class="quote">' + wisdom.quote + '.</p>';
   message += '<p class="source">' + wisdom.source + '</p>';
-  if (wisdom.citation && wisdom.year) {
-    message += '<span class="citation">' + wisdom.citation + '</span>';
-    message += '<span class="year">' + wisdom.year + '</span>'
-  } else {
-    message += '<span class="citation">' + wisdom.citation + '</span>';
+  if(wisdom.citation){
+    message += '<span class="citation">' + wisdom.citation + '</span>' + '<span class="year">' + wisdom.year + '</span'
   }
-  return message
-}
+  document.getElementById("quote-box").innerHTML = message;
+};
+printQuote();
 //<p class="quote">Every great developer you know got there by solving problems they were unqualified to solve until they actually did it.</p>
 
 //<p class="source">Patrick McKenzie<span class="citation">Twitter</span><span class="year">2016</span></p>
